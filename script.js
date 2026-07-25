@@ -1,25 +1,95 @@
 script.js
-function speak(text) {
+function showPain() {
 
-    // 読み上げ中なら一度停止
-    speechSynthesis.cancel();
+    document.getElementById("subMenu").innerHTML = `
 
-    // 読み上げ内容
-    const msg = new SpeechSynthesisUtterance(text);
+    <p class="question">
+    どこが痛いですか？
+    </p>
 
-    // 日本語
-    msg.lang = "ja-JP";
+    <button onclick="selectMessage('🧠 頭が痛いです')">
+    🧠 頭
+    </button>
 
-    // ゆっくり話す
-    msg.rate = 0.8;
+    <button onclick="selectMessage('🫁 胸が痛いです')">
+    🫁 胸
+    </button>
 
-    // 声の高さ
-    msg.pitch = 1.0;
+    <button onclick="selectMessage('🍀 お腹が痛いです')">
+    🍀 お腹
+    </button>
 
-    // 音量
-    msg.volume = 1.0;
+    <button onclick="selectMessage('🦴 腰が痛いです')">
+    🦴 腰
+    </button>
 
-    // 読み上げ開始
-    speechSynthesis.speak(msg);
+    <button onclick="selectMessage('🦵 足が痛いです')">
+    🦵 足
+    </button>
+
+    <button onclick="selectMessage('✋ 手が痛いです')">
+    ✋ 手
+    </button>
+
+    `;
+
+}
+
+
+
+function showToilet() {
+
+    document.getElementById("subMenu").innerHTML = `
+
+    <p class="question">
+    トイレのどうしましたか？
+    </p>
+
+
+    <button onclick="selectMessage('🚽 トイレに行きたいです')">
+    🚽 トイレに行きたい
+    </button>
+
+
+    <button onclick="selectMessage('👖 オムツを交換してほしいです')">
+    👖 オムツを交換してほしい
+    </button>
+
+
+    <button onclick="selectMessage('💧 尿が出ました')">
+    💧 尿が出た
+    </button>
+
+
+    <button onclick="selectMessage('💩 便が出ました')">
+    💩 便が出た
+    </button>
+
+
+    <button onclick="selectMessage('😣 かゆい・気になります')">
+    😣 かゆい・気になる
+    </button>
+
+
+    `;
+
+}
+
+
+
+function selectMessage(message) {
+
+    document.getElementById("result").innerHTML = message;
+
+}
+
+
+
+function backMenu() {
+
+    document.getElementById("subMenu").innerHTML = "";
+
+    document.getElementById("result").innerHTML =
+    "ここに選んだ内容が表示されます";
 
 }

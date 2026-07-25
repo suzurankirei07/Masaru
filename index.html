@@ -2,50 +2,70 @@ index.html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お父さんアプリ</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>お父さんの声アプリ</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<h1>🩵 お父さんへ</h1>
+<div class="app">
 
-<div class="container">
+<h1>お父さんの声</h1>
 
-    <button onclick="speak('ごはんが食べたいです')">
-        🍚<br>ごはん
-    </button>
+<p class="question">
+どうしましたか？
+</p>
 
-    <button onclick="speak('水が飲みたいです')">
-        💧<br>水
-    </button>
 
-    <button onclick="speak('トイレに行きたいです')">
-        🚽<br>トイレ
-    </button>
+<div id="menu">
 
-    <button onclick="speak('痛いです')">
-        😖<br>痛い
-    </button>
+<button onclick="showPain()">
+😣 痛い
+</button>
 
-    <button onclick="speak('大丈夫です')">
-        😊<br>大丈夫
-    </button>
+<button onclick="showToilet()">
+🚽 トイレ
+</button>
 
-    <button onclick="speak('お願いします')">
-        🙏<br>お願い
-    </button>
+<button onclick="selectMessage('💧 のどが渇いたです')">
+💧 のどが渇いた
+</button>
 
-    <button onclick="speak('家族に会いたいです')">
-        ❤️<br>家族
-    </button>
+<button onclick="selectMessage('🍚 お腹がすいたです')">
+🍚 お腹がすいた
+</button>
 
-    <button onclick="speak('シマに会いたいです')">
-        🐱<br>シマ
-    </button>
+<button onclick="selectMessage('😴 眠いです')">
+😴 眠い
+</button>
 
 </div>
+
+
+
+<div id="subMenu"></div>
+
+
+
+<div id="result">
+
+ここに選んだ内容が表示されます
+
+</div>
+
+
+<button class="back" onclick="backMenu()">
+⬅ 戻る
+</button>
+
+
+</div>
+
 
 <script src="script.js"></script>
 
