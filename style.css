@@ -1,78 +1,147 @@
 style.css
-
-/* お父さんアプリ Ver.1 */
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
-    padding: 20px;
-    background: #f5f9ff;
-    font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+    padding: 0;
+    font-family: 
+        "Hiragino Maru Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+
+    background: #fff7f2;
+    color: #5a4035;
 }
+
+
+.app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+
+/* タイトル */
 
 h1 {
-    text-align: center;
-    color: #1565c0;
-    font-size: 42px;
-    margin-bottom: 30px;
+    font-size: 28px;
+    color: #8b5e3c;
+    margin-bottom: 25px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+
+/* 写真部分 */
+
+.photo-area {
+    margin-bottom: 25px;
 }
+
+
+.photo-placeholder {
+
+    width: 220px;
+    height: 220px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #f2d8c8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8b6b58;
+
+    font-size: 18px;
+
+    border: 5px solid #fff;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* メッセージ */
+
+.message {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    line-height: 2;
+
+    font-size: 17px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* ボタン */
 
 button {
-    height: 170px;
+
+    background: #d88b72;
+
+    color: white;
+
     border: none;
-    border-radius: 25px;
-    font-size: 38px;
-    font-weight: bold;
+
+    border-radius: 30px;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
     cursor: pointer;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-    transition: all 0.2s ease;
-    line-height: 1.4;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
 }
 
-button:hover {
-    transform: scale(1.03);
-}
 
 button:active {
-    transform: scale(0.98);
+
+    transform: scale(0.95);
+
 }
 
-/* ボタンの色 */
-button:nth-child(1) { background: #FFE082; } /* ごはん */
-button:nth-child(2) { background: #B3E5FC; } /* 水 */
-button:nth-child(3) { background: #C8E6C9; } /* トイレ */
-button:nth-child(4) { background: #FFCDD2; } /* 痛い */
-button:nth-child(5) { background: #FFF59D; } /* 大丈夫 */
-button:nth-child(6) { background: #D1C4E9; } /* お願い */
-button:nth-child(7) { background: #F8BBD0; } /* 家族 */
-button:nth-child(8) { background: #E0E0E0; } /* シマ */
 
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
 
-    h1 {
-        font-size: 34px;
-    }
+/* 思い出 */
 
-    .container {
-        gap: 15px;
-    }
+.memory {
 
-    button {
-        height: 140px;
-        font-size: 30px;
-    }
+    margin-top: 40px;
+
+    background: #fff;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+}
+
+
+.memory h2 {
+
+    color: #8b5e3c;
+
+    font-size: 22px;
+
+}
+
+
+.memory p {
+
+    line-height: 1.8;
+
 }
