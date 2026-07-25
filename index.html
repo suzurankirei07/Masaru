@@ -1,8 +1,11 @@
 index.html
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>お父さんの声アプリ</title>
@@ -11,63 +14,84 @@ index.html
 
 </head>
 
+
 <body>
+
 
 <div class="app">
 
+
 <h1>お父さんの声</h1>
+
 
 <p class="question">
 どうしましたか？
 </p>
 
 
-<div id="menu">
 
 <button onclick="showPain()">
 😣 痛い
 </button>
 
+
 <button onclick="showToilet()">
 🚽 トイレ
 </button>
 
-<button onclick="selectMessage('💧 のどが渇いたです')">
+
+<button onclick="selectMessage('のどが渇きました')">
 💧 のどが渇いた
 </button>
 
-<button onclick="selectMessage('🍚 お腹がすいたです')">
+
+<button onclick="selectMessage('お腹がすきました')">
 🍚 お腹がすいた
 </button>
 
-<button onclick="selectMessage('😴 眠いです')">
+
+<button onclick="selectMessage('眠いです')">
 😴 眠い
 </button>
 
+
+
+<div id="subMenu">
+
 </div>
-
-
-
-<div id="subMenu"></div>
 
 
 
 <div id="result">
 
-ここに選んだ内容が表示されます
+選んだ内容が表示されます
 
 </div>
 
 
+
+<button onclick="readMessage()">
+
+🔊 読み上げる
+
+</button>
+
+
+
 <button class="back" onclick="backMenu()">
+
 ⬅ 戻る
+
 </button>
 
 
 </div>
 
 
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
